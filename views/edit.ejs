@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Post</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>Edit Post</h1>
+  <form action="/update/<%= post.id %>" method="POST">
+    <input name="title" value="<%= post.title %>" required>
+    <input name="author" value="<%= post.author %>" required>
+    <textarea name="content" required><%= post.content %></textarea>
+    <button type="submit">Update</button>
+  </form>
+  <a href="/">Back to Home</a>
+</body>
+</html>
